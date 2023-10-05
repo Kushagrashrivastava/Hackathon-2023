@@ -3,20 +3,23 @@ import ToolBar from './ToolBar';
 import Sidebar from './Sidebar';
 import Backdrop from './Backdrop';
 import { Grid, Paper, Avatar } from '@mui/material';
-import HomeIcon from '@mui/icons-material/Home';
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import PersonIcon from '@mui/icons-material/Person';
+import UploadIcon from '@mui/icons-material/Upload';
+// import { Link } from 'react-router-dom';
 
 const StudentPortal = () => {
-    const paperStyle={padding: 20, height: '70vh', width: 350, margin: "20px auto"}
+    const paperStyle={padding: 20, height: '70vh', width: 350, margin: "20px auto"};
     const avatarStyle={backgroundColor: '#1876d1',margin: "30px 0 0 0",width: 80, 
     height: 80, 
-    fontSize: 60,}
-    const btnstyle={margin: "8px 0"}
+    fontSize: 60,};
+    const btnstyle={margin: "8px 0"};
     const[sidebar, setSidebar] = useState(false);
     const toggleSidebar = () => {
         setSidebar(prevState => !prevState);
-    }
+    };
+    const rectangle = {width: '200px', height: '100px', border: '2px solid black', display: 'flex',         
+    justifyContent: 'center', 
+    alignItems: 'center'};
 
   return (
   <Grid>
@@ -29,25 +32,18 @@ const StudentPortal = () => {
 
 <Paper elevation={10} style={paperStyle}>
     <Grid align='center'>
-        <Avatar style={avatarStyle}><HomeIcon fontSize='80' /></Avatar>
-        <h1 style={btnstyle}>Home</h1>
+        <Avatar style={avatarStyle}><PersonIcon fontSize='80' /></Avatar>
+        <h1 style={btnstyle}>Student Portal</h1>
     </Grid>
 
-    <div>
-        <h2 style={btnstyle}>Steps to get verified:-</h2>
-        <Link>
-        <Button style={btnstyle} >College & Scholarship Verification</Button>
-        </Link>
-        <Link>
-        <Button style={btnstyle} sx={{fontSize: 15}}>Documents Verificarion</Button>
-        </Link>
-        <Link>
-        <Button style={btnstyle} sx={{fontSize: 15}}>Re-View Documents</Button>
-        </Link>
-        <Link>
-        <Button style={btnstyle} sx={{fontSize: 15}}>Fees & Submition</Button>
-        </Link>
-    </div>
+    <h2>Document</h2>
+    <div style={rectangle}>
+        Document
+        </div>
+    <h2>Fetch Documents</h2>
+    <div style={rectangle}>Fetch Documents</div>
+    <h2>Upload Document</h2>
+    <div style={rectangle}>Upload Document</div>
 
 </Paper>
 </Grid>
