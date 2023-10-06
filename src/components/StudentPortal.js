@@ -38,7 +38,7 @@ const StudentPortal = () => {
 
     <h2>Document</h2>
     <div style={rectangle}>
-        Document
+        Document we will be uploading this portol soon
         </div>
     <h2>Fetch Documents</h2>
     <div style={rectangle}>Fetch Documents</div>
